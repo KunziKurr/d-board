@@ -49,11 +49,7 @@ const svgs ={
 
 
 }
-const sampleData =[
-    {  y: 6 },
-    {  y: 1 },
-    {  y: 3 },
-]
+
 
 
 export default function Profle() {
@@ -79,128 +75,8 @@ export default function Profle() {
                         <p className="profile_wrapper_details_details_no"> +254700123456</p>
                     </div>
                 </div>
-                <div className="profile_wrapper_info">
-                <h4 className="profile_wrapper_invitation_wrapper_h4">
-                            Members information
-                        </h4>
-                    
-                    <div className="profile_wrapper_info_wrapper">
-                    
-                        <div className="profile_wrapper_info_wrapper_info">
-                            <p className="profile_wrapper_info_wrapper_info_wp_name">
-                                Umoja Work Space
-                            </p>
-                             <p className="profile_wrapper_info_wrapper_info_wp_date">
-                             Date joined: 3/03/2022
-                            </p>
-                             <p className="profile_wrapper_info_wrapper_info_wp_status">
-                                Status: Active
-                            </p>
-                              <button className="profile_wrapper_info_wrapper_info_wp_leave">
-                                Request to leave workspace
-                            </button>
-                        </div>
-
-                        <div className="profile_wrapper_info_wrapper_info">
-                            <p className="profile_wrapper_info_wrapper_info_wp_name">
-                                Umoja Work Space
-                            </p>
-                             <p className="profile_wrapper_info_wrapper_info_wp_date">
-                             Date joined: 3/03/2022
-                            </p>
-                             <p className="profile_wrapper_info_wrapper_info_wp_status">
-                                Status: Active
-                            </p>
-                              <button className="profile_wrapper_info_wrapper_info_wp_leave">
-                                Request to leave workspace
-                            </button>
-                        </div>
-
-                        <div className="profile_wrapper_info_wrapper_info">
-                            <p className="profile_wrapper_info_wrapper_info_wp_name">
-                                Umoja Work Space
-                            </p>
-                             <p className="profile_wrapper_info_wrapper_info_wp_date">
-                             Date joined: 3/03/2022
-                            </p>
-                             <p className="profile_wrapper_info_wrapper_info_wp_status">
-                                Status: Active
-                            </p>
-                              <button className="profile_wrapper_info_wrapper_info_wp_leave">
-                                Request to leave workspace
-
-                                  
-                            </button>
-                        </div>
-
-                           <div className="profile_wrapper_info_wrapper_info">
-                            <p className="profile_wrapper_info_wrapper_info_wp_name">
-                                Umoja Work Space
-                            </p>
-                             <p className="profile_wrapper_info_wrapper_info_wp_date">
-                             Date joined: 3/03/2022
-                            </p>
-                             <p className="profile_wrapper_info_wrapper_info_wp_status">
-                                Status: Active
-                            </p>
-                              <button className="profile_wrapper_info_wrapper_info_wp_leave">
-                                Request to leave workspace
-                            </button>
-                        </div>
-
-
-
-
-                    </div>
-                    
-                </div>
-                <div className="profile_wrapper_invitation">
-                    <div className="profile_wrapper_invitation_wrapper">
-                        <h4 className="profile_wrapper_invitation_wrapper_h4">
-                            Invitation List
-                        </h4>
-                        <div className="profile_wrapper_invitation_wrapper_lister">
-                            <div className="profile_wrapper_invitation_wrapper_list">
-                                    <p className="profile_wrapper_invitation_wrapper_list_name">
-                                        {svgService.avatar1}
-                                        Salome Kami
-                                    </p>
-                                    <p className="profile_wrapper_invitation_wrapper_list_wp_name">
-                                        Umoja work space
-                                    </p>
-                                    <p className="profile_wrapper_invitation_wrapper_list_days">2 days remaining</p>
-                                    <button className="profile_wrapper_invitation_wrapper_list_accept">Accept Invite</button>
-                                    <button className="profile_wrapper_invitation_wrapper_list_decline">Decline Invite</button>
-                            </div>
-
-                            <div className="profile_wrapper_invitation_wrapper_list">
-                                    <p className="profile_wrapper_invitation_wrapper_list_name">
-                                        {svgService.avatar1}
-                                        Salome Kami
-                                    </p>
-                                    <p className="profile_wrapper_invitation_wrapper_list_wp_name">
-                                        Umoja work space
-                                    </p>
-                                    <p className="profile_wrapper_invitation_wrapper_list_days">2 days remaining</p>
-                                    <button className="profile_wrapper_invitation_wrapper_list_accept">Accept Invite</button>
-                                    <button className="profile_wrapper_invitation_wrapper_list_decline">Decline Invite</button>
-                            </div>
-
-                            <div className="profile_wrapper_invitation_wrapper_list">
-                                    <p className="profile_wrapper_invitation_wrapper_list_name">
-                                        {svgService.avatar1}
-                                        Salome Kami
-                                    </p>
-                                    <p className="profile_wrapper_invitation_wrapper_list_wp_name">
-                                        Umoja work space
-                                    </p>
-                                    <p className="profile_wrapper_invitation_wrapper_list_days">2 days remaining</p>
-                                    <button className="profile_wrapper_invitation_wrapper_list_accept">Accept Invite</button>
-                                    <button className="profile_wrapper_invitation_wrapper_list_decline">Decline Invite</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               
+               
             </div>
         </div>
              

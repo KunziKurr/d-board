@@ -26,9 +26,7 @@ export default function Login() {
                         </span>
                 </div>
                 <div className="login_container_login_form">
-                {
-                    (errorMagg.length > 0)? (<div className="erroMag"> <button onClick={()=>{setErrorMag('')}}>X</button> {errorMagg} </div>):console.log('No Err')
-                }
+               
 
                     <span className="login_container_login_form_heading">
                         Welcome to D-Board
@@ -36,21 +34,16 @@ export default function Login() {
                     
                     <Formik
                     
-                        initialValues={{ email: '', password: '' }}
+                        initialValues={{ username: '', password: '' }}
                         validate={values => {
                             const errors = {};
-                            if (!values.email) {
-                            errors.email = 'Required';
-                            } else if (
-                            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-                            ) {
-                            errors.email = 'Invalid email address';
-                            }
+                           if(!values.username){
+                            errors.password = 'Required';
+                           }
+                          
                             // PASSWORD VALIDATION
                             if(!values.password){
                                 errors.password = 'Required';
-                            }else if(values.password == "Qwerty" || values.password == 'qwerty' || values.password == '123456'){
-                                errors.password = 'Weak password! Choose more characters like @ & *'
                             }
                             else if(values.password.length <= 5){
                                 errors.password = 'Your password is too short'
@@ -77,17 +70,17 @@ export default function Login() {
                             <path d="M15.996 15.457l16.004-7.539v-3.918h-32v3.906zM16.004 19.879l-16.004-7.559v15.68h32v-15.656z"></path>
                         </svg>
 
-                            Email address
+                            Username
                         </label>
                         <input    onFocus={(e) => {
                             console.log('Focused on input');
                         }} className="login_container_login_form_form_input" 
-                        type="email"
-                        name="email"
+                        type="username"
+                        name="username"
                         onChange={handleChange}
                         onBlur={handleBlur}
-                        value={values.email} />
-                        {errors.email && touched.email && errors.email}
+                        value={values.username} />
+                        {errors.username && touched.username && errors.username}
 
             <label className="login_container_login_form_form_label"> 
                 <svg height="17" width="17" viewBox="0 0 24 24">
@@ -104,7 +97,9 @@ export default function Login() {
                           value={values.password}
                            />
                         {errors.password && touched.password && errors.password}
-
+                        {
+                    (errorMagg.length > 0)? (<div className="erroMag"> <button onClick={()=>{setErrorMag('')}}>X</button> {errorMagg} </div>):<>    </>
+                }
                         <button className="login_container_login_form_form_login_button" type='submit' onClick={handleSubmit}>
                             Login 
                             <svg className="login_container_login_form_form_login_button_icon" width="7" height="11" viewBox="0 0 7 11" fill="none">

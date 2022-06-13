@@ -47,13 +47,14 @@ const sampleData =[
 
 
 export default  function  Home() {
+    // 
     const dispatch = useDispatch();
     const { token } = useSelector(state => state.registerJob);
    const { userData } = useSelector(state => state.registerJob);
    const [newWriter, showNewWriterDialog] = useState("hidden")
    console.log(userData + "[][]")
     // console.log(token.length <= 0);
-    // token.length <= 0 ? router.push('../onboarding/login') : null;
+    token == null ? router.push('../login') : null;
 
     return(
         <div>   

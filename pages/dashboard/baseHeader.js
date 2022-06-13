@@ -44,7 +44,7 @@ export default function BaseHeader(props) {
                                 <div className="dashboard_base_top_right_profile_banner">
                                     <ul className="dashboard_base_top_right_profile_banner_ul">
                                         <li className="dashboard_base_top_right_profile_banner_ul_li">
-                                            <Link href="../owner/profile">View profile</Link>
+                                            <Link href="./profile">View profile</Link>
                                         </li>
                                         <li className="dashboard_base_top_right_profile_banner_ul_li">
                                             <Link href="#">Logout</Link>

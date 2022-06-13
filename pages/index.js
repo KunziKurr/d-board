@@ -1,37 +1,31 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Login from './login'
-// import Base from './dashboard/base'
+import Home from './board/home'
 import { useRouter } from "next/router";
 import { connect, useDispatch, useSelector } from 'react-redux';
 
 
-export default function Home(props) {
-  // const { token } = useSelector(state => state.registerJob);
-
+export default function Landing(props) {
+  const { token } = useSelector(state => state.registerJob);
+console.log("TOKEN IS =>"  +  token)
   const router = useRouter()
 
-
-  // token.length <= 0 ? router.push('../onboarding/login') : null;
-
-
-
-  // (query.token) ? router.push({
-  //   pathname: '/onboarding/newWriter',
-  //   query: { token: query.token },
-  // }) : null;
   
   return (
     <div>
       <Head>
-        <title>Sotoo | Welcome to sotoo</title>
-        <meta name="description" content="Manage your team without missing anything" />
+        <title>Dashboard View</title>
+        <meta name="description" content="Manage your your applications" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
         
       </div>
-      <Login />
+      {
+          token == null ? <Login/> : <Home />
+      }
+
     </div>
   )
 }
