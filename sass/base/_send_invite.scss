@@ -1,0 +1,55 @@
+.send_invite {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #403e3e73;
+    display: flex;
+    align-items: center;
+    position: relative;
+    &_wrap {
+        margin: 0 27%;
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 0.7rem;
+        width: 40%;
+        position: relative;
+        &_heading {
+            margin: 0rem 0rem 1rem 0rem;
+            font-size: 1.8rem;
+            color: $color_blue_dark;
+        }
+        &_form {
+            margin: 2rem 0;
+            position: relative;
+            &_container {}
+            &_label {
+                position: absolute;
+                font-size: 1.1rem;
+                left: 1rem;
+                top: 0.3rem;
+                color: $color_gray;
+                & sup {
+                    color: $color_red;
+                }
+            }
+            &_input {
+                border: none;
+                padding: .6rem 1rem;
+                width: 70%;
+                box-shadow: 0px 0px 33px #ddd;
+                padding-top: 3rem;
+                border-radius: 0.6rem;
+                outline: none;
+            }
+            &_btn {
+                position: relative !important;
+                right: unset !important;
+                margin: -0.4rem 0 0 0 !important;
+                font-weight: bold !important;
+            }
+        }
+    }
+    &_container {
+        margin: 3rem 0;
+    }
+}

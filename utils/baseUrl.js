@@ -1,0 +1,1 @@
+export const BaseUrl = 'https://gateway-service-5qoj75li4a-uc.a.run.app/api/v1/'

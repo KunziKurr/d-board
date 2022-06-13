@@ -1,0 +1,56 @@
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("../assets/font/Montserrat-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-Bold";
+    src: url("../assets/font/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Montserrat-Light";
+    src: url("../assets/font/Montserrat-Light.ttf");
+}
+
+@font-face {
+    font-family: "FontAwesome";
+    src: url("../assets/font/fa-solid-900.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("../assets/font/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url("../assets/font/Roboto-Medium.ttf");
+}
+
+.header_heading {
+    &-brand {
+        text-transform: uppercase;
+        font-weight: 600;
+        display: inline-block;
+        -webkit-background-clip: text;
+        color: #0000;
+        transition: all .2s;
+        letter-spacing: -.2rem;
+        font-size: 2rem;
+    }
+    &-sub {
+        font-size: 1.2rem;
+        color: #00115d;
+        position: absolute;
+        left: 23rem;
+        top: 3.5rem;
+        letter-spacing: -0.1rem;
+        text-transform: lowercase;
+    }
+}
+
+#disabledBtn {
+    background-color: $color_gray;
+    cursor: default;
+}

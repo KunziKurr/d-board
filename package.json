@@ -1,20 +1,35 @@
 {
-  "name": "d_board",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "12.1.6",
-    "react": "18.1.0",
-    "react-dom": "18.1.0"
-  },
-  "devDependencies": {
-    "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6"
-  }
+    "name": "d_board",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "style": "sass sass/master.scss styles/master.css --style=compressed -w"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.8.2",
+        "@emotion/styled": "^11.8.1",
+        "@mui/icons-material": "^5.5.1",
+        "@mui/material": "^5.5.1",
+        "@reduxjs/toolkit": "^1.8.2",
+        "axios": "^0.26.1",
+        "formik": "^2.2.9",
+        "next": "12.1.0",
+        "react": "17.0.2",
+        "react-dom": "17.0.2",
+        "react-redux": "^7.2.6",
+        "redux-devtools-extension": "^2.13.9",
+        "redux-persist": "^6.0.0",
+        "redux-thunk": "^2.4.1",
+        "sass": "^1.49.9",
+        "victory": "^36.5.0",
+        "yup": "^0.32.11"
+    },
+    "devDependencies": {
+        "eslint": "8.17.0",
+        "eslint-config-next": "12.1.6"
+    }
 }

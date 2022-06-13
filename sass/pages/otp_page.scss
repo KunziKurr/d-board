@@ -1,0 +1,236 @@
+.otp_page {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-image: linear-gradient(to top right, $color_blue_dark, $color_green_dark);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    &_container {
+        width: 55%;
+        background: #fff;
+        border-radius: 1rem;
+        padding: 1rem 0;
+        height: auto;
+        &_sotoo_h1 {
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+            font-size: 5rem;
+            color: $color_blue_dark;
+            & svg {
+                position: relative;
+                top: 2rem
+            }
+        }
+        &_verify_image {
+            display: grid;
+            place-items: center;
+            margin: 1rem auto;
+        }
+        &_verify_text {
+            display: grid;
+            place-items: center;
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+        &_verify_confirm {
+            display: grid;
+            place-items: center;
+            font-size: 1.6rem;
+            color: $color_gray;
+            margin-top: 1rem;
+        }
+        &_verify_sms_sent {
+            display: grid;
+            place-items: center;
+            font-size: 1.6rem;
+            color: $color_gray;
+        }
+        &_verify_confirm_otp {
+            display: grid;
+            place-items: center;
+            font-size: 1.6rem;
+            color: $color_gray;
+            margin-top: 5rem;
+            margin-bottom: 1rem;
+        }
+        &_form {
+            position: relative;
+            display: grid;
+            place-content: center;
+            &_otp {
+                width: 8rem;
+                height: 7rem;
+                margin: 1rem;
+                display: inline-flex;
+                justify-content: center;
+                text-align: center;
+                font-size: 3.2rem;
+                border: none;
+                box-shadow: 4px 0px 23px #05103733;
+                outline: none;
+            }
+            &_btn {
+                justify-content: center;
+                align-self: center;
+                display: flex;
+                margin: 1rem auto !important;
+            }
+        }
+        &_verify_regenerate {
+            color: $color_gold_dark;
+            display: flex;
+            justify-content: center;
+            margin: 1rem;
+            font-size: 1.3rem;
+        }
+    }
+}
+
+.step2 {
+    & .register_container_body_step1.step2.avatars {
+        & label {
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        & span.MuiRadio-root.MuiRadio-colorPrimary {
+            position: absolute;
+            padding: 3rem;
+            display: flex;
+            align-self: center;
+            align-items: center;
+            justify-content: center;
+            margin-top: -2rem;
+        }
+        & .css-hyxlzm {
+            visibility: hidden
+        }
+        & .MuiTouchRipple-root.css-w0pj6f {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        & .PrivateSwitchBase-root.Mui-checked.css-1a5icme {
+            & .MuiTouchRipple-root.css-w0pj6f {
+                &::before {
+                    visibility: visible;
+                }
+            }
+        }
+    }
+    & .register_container_body_step1_email_prompt {
+        width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: flex-start;
+        &_p {
+            font-size: 1.5rem;
+            width: 93%;
+            text-align: left;
+            margin: 0 auto;
+        }
+    }
+    & .register_container_body_step1_container_form_form_login_button {
+        align-self: flex-start;
+        align-self: flex-start;
+        align-items: center;
+        width: unset !important;
+        padding: 1.5rem 5rem;
+        margin-bottom: 8rem;
+        cursor: pointer;
+    }
+    & .register_container_body_step1_container_heading {
+        width: 95%;
+    }
+    & .register_container_body_step1_container form {
+        width: 95%;
+        & .MuiFormControlLabel-root.MuiFormControlLabel-labelPlacementEnd.css-j204z7-MuiFormControlLabel-root.css-hyxlzm {
+            visibility: hidden !important;
+        }
+    }
+    & .register_container_body_step1_container_subheading {
+        width: 100%;
+    }
+    & .register_container_body_step1_container_form_holder div.MuiFormControl-root.MuiTextField-root.css-i44wyl {
+        width: 100%;
+    }
+    & .MuiFormLabel-root.MuiFormLabel-colorPrimary.css-1vovazs {
+        display: flex;
+        font-size: 2rem;
+        color: #000;
+        font-weight: 500;
+    }
+    & .MuiFormControl-root.css-13sljp9 {
+        width: 95%;
+        margin-left: 6rem;
+    }
+    & .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-q8lw68,
+    .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-1u5ei5s {
+        width: 3rem;
+        height: 3rem;
+        color: $color_green_dark
+    }
+    & .MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-9l3uo3 {
+        font-weight: 100;
+        line-height: 1.5;
+        font-size: 1.6rem;
+    }
+    & .MuiTypography-root.MuiTypography-body1.MuiFormControlLabel-label.css-9l3uo3 {
+        margin: 1rem 0;
+    }
+    &.avatars {
+        // &.MuiRadio-root.MuiRadio-colorPrimary.MuiButtonBase-root.MuiRadio-root.MuiRadio-colorPrimary.PrivateSwitchBase-root.css-1a5icme {
+        //     position: absolute;
+        //     padding: 3rem;
+        //     display: flex;
+        //     align-self: center;
+        //     align-items: center;
+        //     justify-content: center;
+        //     margin-top: -2rem;
+        //     & .css-hyxlzm {
+        //         visibility: hidden;
+        //     }
+        // }
+        // & .MuiFormControlLabel-root.MuiFormControlLabel-labelPlacementEnd.css-j204z7-MuiFormControlLabel-root.css-hyxlzm {
+        //     visibility: hidden !important;
+        // }
+        & .MuiRadio-root.MuiRadio-colorPrimary.MuiButtonBase-root.MuiRadio-root.MuiRadio-colorPrimary.PrivateSwitchBase-root.css-1a5icme {
+            position: absolute;
+        }
+        & .MuiTouchRipple-root.css-w0pj6f {
+            // background-color: red;
+            &::before {
+                width: 5rem;
+                height: 5rem;
+                content: "";
+                background-color: #77a87cad;
+                border-radius: 50%;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: "FontAwesome";
+                font-size: 3rem;
+                color: #fffffff5;
+                visibility: hidden;
+            }
+        }
+        .MuiFormControlLabel-root.MuiFormControlLabel-labelPlacementEnd.css-1jaw3da {
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+#hidden {
+    display: none !important;
+}

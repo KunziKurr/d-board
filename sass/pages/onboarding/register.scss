@@ -1,0 +1,297 @@
+    .register {
+        &_container {
+            display: flex;
+            flex-direction: row;
+            &_left_bar {
+                width: 30vw;
+                height: 100vh;
+                overflow: hidden;
+                background-image: linear-gradient(to top right, $color_blue_dark, $color_green_dark);
+                display: flex;
+                justify-content: flex-start;
+                align-self: center;
+                align-items: center;
+                flex-direction: column;
+                padding-top: 12%;
+                &_sotoo_h1 {
+                    color: $color-white;
+                    display: block;
+                    text-align: center;
+                    font-size: 8rem;
+                    margin-bottom: -1.7rem;
+                    &_logo {
+                        position: relative;
+                        top: .8rem;
+                        left: -2rem;
+                        border-bottom: 0.6rem solid;
+                        padding-bottom: 5px;
+                    }
+                }
+                &_sotoo_slogan {
+                    color: $color-white;
+                    display: block;
+                    text-align: left;
+                    font-size: 1.5rem;
+                    font-weight: bold;
+                    justify-content: center;
+                    padding-top: 5rem;
+                }
+            }
+            &_body {
+                width: 70vw;
+                height: 100vh;
+                overflow-y: scroll;
+                &_step1 {
+                    width: 100%;
+                    background-color: $color-white;
+                    // height: 100vh;
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    overflow-x: hidden;
+                    &_container {
+                        flex-direction: column;
+                        display: flex;
+                        width: 100%;
+                        align-items: center;
+                        position: relative;
+                        & form {
+                            width: 80%;
+                            & input {
+                                padding: 2rem;
+                                font-size: 1.4rem;
+                            }
+                            & label {
+                                top: 2.2rem;
+                                left: 2.5rem;
+                                font-size: 1.5rem;
+                                max-width: calc(100% - 24px);
+                                padding-right: 1rem;
+                                background-color: #fff;
+                            }
+                            & .Mui-focused input {
+                                // background-color: red;
+                                border-color: $color_green_dark;
+                                outline: none;
+                                outline-color: $color_green_dark;
+                            }
+                        }
+                        &_form_holder {
+                            & .MuiOutlinedInput-root.MuiInputBase-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.css-1v4ccyo {
+                                margin: 2rem 2rem;
+                            }
+                            & div.MuiFormControl-root.MuiTextField-root.css-i44wyl {
+                                width: 50%;
+                            }
+                            &_self {
+                                & .MuiFormControl-root.MuiTextField-root.css-i44wyl {
+                                    // margin: 1rem 2rem;
+                                    width: 50%;
+                                    display: flex;
+                                    & input {
+                                        padding: 2rem;
+                                    }
+                                    & .MuiOutlinedInput-root.MuiInputBase-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.css-1v4ccyo {
+                                        margin: 1rem 2rem;
+                                    }
+                                }
+                                & div.MuiFormControl-root.MuiTextField-root.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+                                    width: 50%;
+                                }
+                                & label {
+                                    top: 1.2rem !important;
+                                }
+                            }
+                            &_checkbox {
+                                width: 50% !important;
+                                display: flex;
+                                margin-left: 2rem !important;
+                                align-items: center;
+                                &_propter {
+                                    font-size: 1.5rem;
+                                    color: #000 !important;
+                                    & a {
+                                        color: $color_green_dark !important;
+                                    }
+                                }
+                                & span {
+                                    color: $color_green_dark !important;
+                                }
+                                & .css-i4bv87-MuiSvgIcon-root {
+                                    width: 2em;
+                                    height: 2em;
+                                }
+                            }
+                        }
+                        &_heading {
+                            font-size: 3rem;
+                            font-weight: bold;
+                            display: flex;
+                            align-self: flex-start;
+                            width: 80%;
+                            margin: 0 auto;
+                            text-indent: 2rem;
+                            padding-top: 4rem;
+                        }
+                        &_subheading {
+                            font-size: 1.4rem;
+                            display: flex;
+                            align-self: flex-start;
+                            width: 80%;
+                            margin: 2rem auto;
+                            text-indent: 2rem;
+                        }
+                        &_form_form {
+                            // flex-direction: column;
+                            // display: flex;
+                            &_register {
+                                width: 80%;
+                                display: flex;
+                                text-indent: 3rem;
+                                margin: 4rem;
+                                font-size: 1.4rem;
+                                & a {
+                                    text-indent: 1rem;
+                                    color: $color_gray
+                                }
+                            }
+                            width: 100%;
+                            align-items: center;
+                            & .MuiFormControl-root {
+                                width: 70%;
+                                margin: 1.3rem 0;
+                            }
+                            & label {
+                                font-size: 1rem !important;
+                                width: 70%;
+                                display: flex;
+                                margin-left: 5rem;
+                                position: absolute;
+                                top: 4rem;
+                                color: $color_gray;
+                                & svg {
+                                    margin-left: -1rem;
+                                    margin-right: 1rem;
+                                    fill: currentColor !important;
+                                }
+                            }
+                            &_container {
+                                width: 40%;
+                                display: inline-flex;
+                                flex-direction: row;
+                                position: relative;
+                                margin: 0rem 2rem;
+                            }
+                            &_input {
+                                width: 100%;
+                                padding: 3.4rem 0 1.4rem 1.6rem;
+                                margin: 1.3rem 0;
+                                border: none;
+                                box-shadow: 1px 1px 16px rgb(5 16 55 / 18%);
+                                border-radius: 0.3rem;
+                                outline: none;
+                                background: transparent;
+                                z-index: 2;
+                                vertical-align: middle;
+                                font-size: 1.3rem;
+                                &:focus {
+                                    // background:red
+                                }
+                                // background: transparent;
+                                // z-index: 2;
+                            }
+                            &_forgot {
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: flex-end;
+                                align-self: center;
+                                width: 70%;
+                                a {
+                                    text-align: right;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    font-size: 1.5rem;
+                                    text-decoration: none;
+                                    color: $color_gray;
+                                }
+                            }
+                            &_login_button {
+                                width: 40% !important;
+                                padding: 1.4rem 0;
+                                font-size: 1.5rem;
+                                border: none;
+                                background-color: $color_blue_dark;
+                                color: $color_white;
+                                box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+                                border-radius: 0.3rem;
+                                display: flex;
+                                justify-content: center;
+                                margin-left: 3rem !important;
+                                align-items: center;
+                                &_icon {
+                                    position: relative;
+                                    left: 1rem;
+                                }
+                            }
+                            h1 {
+                                overflow: hidden;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .register_container_body_step1_container_form_holder div.MuiFormControl-root.MuiTextField-root.css-i44wyl {
+        align-self: flex-start;
+        // display: flex;
+        width: 50%;
+    }
+    
+    .erroMag {
+        width: auto;
+        background-color: #fabdbd;
+        padding: 1.1rem 1rem;
+        font-size: 1.5rem;
+        position: relative;
+        top: 3rem;
+        text-align: center;
+        justify-content: center;
+        border-radius: 0.5rem;
+        min-width: 30%;
+        display: flex;
+        align-self: flex-start;
+        margin-left: 12%;
+        z-index: 10;
+        & button {
+            align-self: flex-start;
+            position: relative;
+            left: 0rem;
+            align-items: center;
+            background-color: #860606;
+            color: #fbbcbc;
+            border: none;
+            padding: 0.7rem 1.1rem;
+            border-radius: 50%;
+            margin-right: 1.6rem;
+        }
+    }
+    
+    .loader_parent {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #43658699;
+    }

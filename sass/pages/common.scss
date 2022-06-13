@@ -1,0 +1,160 @@
+.new_writer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    background-color: #100a0aad;
+    &_wrapper {
+        width: 49%;
+        background-color: #fff;
+        padding: 2rem 3rem;
+        margin-left: 18.4%;
+        border-radius: 0.5rem;
+        position: relative;
+        & button {
+            align-self: unset;
+            position: relative;
+            right: unset;
+            margin: 0;
+            margin-top: 2rem;
+        }
+        & .post_new_job_wrapper_cancel {
+            position: absolute;
+            right: 1.4rem;
+            top: -0.4rem;
+        }
+    }
+}
+
+[cancel-controller="hidden"] {
+    display: none;
+}
+
+// VIEW JOB SUMMARY
+.view_job_summary {
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 30px #e9e8e8;
+    padding: 1rem 0;
+    margin-top: 4rem;
+    border-radius: 1rem;
+    margin-bottom: 4rem;
+    &_wrapper {
+        &_container {
+            padding: 3rem 2rem;
+            &_content {
+                margin: 3rem auto;
+                & button {
+                    align-self: unset;
+                    position: relative;
+                    right: unset;
+                    margin: 0;
+                    margin-top: 3rem;
+                    margin-left: 3rem;
+                }
+                &_lister {
+                    display: flex;
+                    flex-direction: column;
+                    width: 95%;
+                    margin: 0 auto;
+                    &_baser {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    &_left {
+                        color: $color_blue_dark;
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        margin: 1.1rem 0;
+                    }
+                    &_right {
+                        color: $color_blue_dark;
+                        font-size: 1.2rem;
+                        font-weight: normal;
+                        width: 70%;
+                    }
+                }
+            }
+            &_heading {
+                font-weight: bold;
+                font-size: 1.2rem;
+                margin: 0rem 0 1rem 0;
+                color: $color_blue_dark;
+                margin: 0rem 0 1rem 3rem;
+            }
+        }
+    }
+}
+
+.view_job_detail_profile {
+    margin: 3rem 0;
+    width: 80%;
+    &_initials {
+        display: flex;
+        align-items: center;
+        padding: 0rem 0rem 0 2rem;
+        &_avatar {
+            svg {
+                width: 5rem;
+                height: 5rem;
+                background-color: #dbd8d8;
+                padding: 0.6rem;
+                border-radius: 50%;
+            }
+        }
+        &_name {
+            margin: 0rem 2rem;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+    }
+    &_info {
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        padding: 1rem 2rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &_button {
+            position: absolute;
+            right: 25%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            border: none;
+            background-color: $color_blue_dark;
+            color: $color_white;
+            padding: 1rem 3rem;
+            border-radius: 0.5rem;
+        }
+        &_email {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+        &_date {
+            font-size: 1rem;
+            color: #79797a;
+        }
+    }
+}
+
+.job_detail {
+    padding: 1rem 2rem;
+    margin-bottom: 5rem;
+    & .job_listing_wrapper_heading {
+        margin-top: -3rem;
+    }
+    & .view_job_summary_wrapper_container_heading {
+        margin: 0rem 0 1rem 3rem;
+    }
+}

@@ -1,0 +1,44 @@
+.header{
+    height: 7rem;
+    background-image: repeating-linear-gradient(145deg, #0000 0%, #a10c6000 50%, #8d0748   0%, #18054b);
+    box-shadow: 0rem .2rem .2rem;
+
+    &_branding{
+
+
+        &_logo{
+            height: 6.7rem;
+            float: left;
+            margin-left: 2rem;
+        }
+    }
+    &_nav{
+        float: right;
+
+        &_ul{
+            list-style: none;
+            position: absolute;
+            top: 2.5rem;
+            right: 13rem;
+        }
+        &_li{
+            display: inline-block;
+            padding-right: 1rem;
+            padding-left: 1rem;
+        }
+        &_a{
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: $color-white;
+            text-transform: uppercase;
+            font-weight: 601;
+
+        }
+        &_a:focus, &_a:active{
+            color:#fefefe;
+            text-decoration: none;
+        }
+    }
+
+    
+}

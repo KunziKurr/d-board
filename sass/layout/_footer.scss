@@ -1,0 +1,41 @@
+.footer{
+    text-emphasis: none;
+    text-align: center;
+    height: 9rem;
+    background-image: repeating-linear-gradient(90deg, #56032a, #0f0039);
+   
+
+    &_brand{
+        
+    }
+    &_nav{
+        
+
+        &_ul{
+            list-style: none;
+        }
+        &_li{
+            display: inline;
+        }
+        &_a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.5rem;
+            padding: 0rem 1rem 0rem 1rem;
+            border-right: dotted;
+            transition: all ease-in-out .3s;
+        }
+        &_a:hover, &_a:active{
+            background-image: linear-gradient(to right, #800843, #040460);
+            padding: .5rem 2rem .5rem 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+            transform: rotate(3deg) scale(1.2);
+            
+        }
+
+    }
+
+    
+}

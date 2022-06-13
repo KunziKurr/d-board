@@ -1,0 +1,323 @@
+        .post_new_job {
+            box-shadow: 0px 0px 30px #e9e8e8;
+            border-radius: 1rem;
+            margin: 4rem 0;
+            padding: 2rem;
+            width: 57%;
+            position: relative;
+            &_wrapper {
+                &_heading {
+                    display: flex;
+                    align-items: center;
+                    text-indent: 1rem;
+                    font-size: 1.6rem;
+                    color: $color_blue_dark;
+                    &.sub_heading {
+                        font-size: 1.4rem;
+                    }
+                    & svg {
+                        width: 2.2rem;
+                        height: 2rem;
+                    }
+                }
+                &_cancel {
+                    position: absolute;
+                    height: 3rem;
+                    width: 3rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    top: 1rem;
+                    right: 1rem;
+                    border: none;
+                    background: unset;
+                    color: $color_red;
+                }
+                &_form {
+                    margin: 2rem 2rem;
+                    margin-bottom: 7rem;
+                    &_container_align {
+                        display: block;
+                        align-items: center;
+                        width: 80%;
+                        margin-right: 4rem;
+                    }
+                    &_input {
+                        width: 80%;
+                        padding: 1.5rem 1.4rem;
+                        outline: none;
+                        border: none;
+                        background: unset;
+                        box-shadow: 0px 0px 13px #adacac;
+                        border-radius: 0.5rem;
+                        margin: 0.7rem 0;
+                        font-size: 1.2rem;
+                        &.deadline {
+                            width: 100%;
+                        }
+                        &.description {
+                            width: 100%;
+                            height: 40vh;
+                        }
+                        &_select {
+                            width: 100%;
+                            padding: 1.5rem 1.4rem;
+                            outline: none;
+                            border: none;
+                            background: unset;
+                            box-shadow: 0px 0px 13px #adacac;
+                            border-radius: 0.5rem;
+                            margin: 0.7rem 0;
+                            font-size: 1.2rem;
+                            padding-right: 4rem;
+                        }
+                        &.upload {
+                            width: 100%;
+                            height: 34vh;
+                            visibility: hidden;
+                            position: relative;
+                            &::before {
+                                content: "Drag and drop files here";
+                                width: 100%;
+                                height: inherit;
+                                position: absolute;
+                                left: 0;
+                                visibility: visible;
+                                border: 2px dotted #ddd;
+                                top: 0;
+                                text-align: center;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #79797a;
+                                font-size: 1.2rem;
+                            }
+                            &::after {
+                                content: "";
+                                width: 20%;
+                                height: 5rem;
+                                position: absolute;
+                                left: 0;
+                                visibility: visible;
+                                border: none;
+                                text-align: center;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #79797a;
+                                font-size: 1.2rem;
+                                margin: 0 auto;
+                                right: 0;
+                                top: 20%;
+                                background-size: 34%;
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                background-image: url('../assets/images/fileicon.svg');
+                            }
+                        }
+                    }
+                    &_label {
+                        margin-left: 1rem;
+                        display: block;
+                        font-size: 1.3rem;
+                        margin-top: 0.4rem;
+                        position: relative;
+                        top: 0.4rem;
+                        color: #302f2f;
+                        margin-bottom: 1rem;
+                        font-weight: bold;
+                    }
+                    &_buttons {
+                        display: flex;
+                        justify-content: space-around;
+                        position: relative;
+                        margin: 3rem auto;
+                        & button {
+                            &.skip {
+                                background-color: $color_gray;
+                            }
+                            position: absolute;
+                            &.color_red {
+                                left: 0rem;
+                            }
+                            &.next {
+                                right: 0rem !important;
+                            }
+                        }
+                    }
+                    &_subheading {
+                        text-align: center;
+                        font-size: 1.6rem;
+                        margin: 1rem 0;
+                        color: $color_blue_dark;
+                        &_sub {
+                            text-align: center;
+                            font-size: .9rem;
+                            margin: 1rem 0;
+                            color: $color_blue_dark;
+                        }
+                    }
+                    &_btn {
+                        display: flex;
+                        align-self: center;
+                        position: absolute;
+                        left: unset;
+                        right: 3rem;
+                        margin: 0 auto;
+                        margin-top: 2rem;
+                        border: none;
+                        padding: 1.1rem 5rem;
+                        border-radius: 0.5rem;
+                        box-shadow: 0px 2px 1px #79797a;
+                        background-color: #365289;
+                        color: #fff;
+                        font-size: 1.2rem;
+                        &.color_red {
+                            right: unset;
+                            background: unset;
+                            border: 1px solid $color_red;
+                            box-shadow: unset;
+                            color: $color_red;
+                        }
+                        &.color_gray {
+                            right: unset;
+                            left: 0;
+                            background: unset;
+                            border: none;
+                            box-shadow: unset;
+                            background-color: $color_gray;
+                            color: $color_white
+                        }
+                    }
+                }
+                &_uploading {
+                    margin: 3rem 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    right: 0;
+                    width: 26vw;
+                    align-items: stretch;
+                    align-self: center;
+                    justify-content: center;
+                    justify-self: center;
+                    top: 13%;
+                    &_bar {
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+                        margin: 1.4rem 0px;
+                        &.color_orange {
+                            & svg {
+                                fill: $color_orange;
+                            }
+                        }
+                        &.color_green {
+                            & svg {
+                                fill: $color_green_dark;
+                            }
+                        }
+                        &.color_blue {
+                            & svg {
+                                fill: $color_blue_dark;
+                            }
+                        }
+                        & svg {
+                            width: 2.5rem;
+                            height: 2.5rem;
+                        }
+                        &_filename {
+                            position: absolute;
+                            text-align: center;
+                            left: 9%;
+                            top: -1.3rem;
+                            font-size: 1.1rem;
+                            &_progress {
+                                position: absolute;
+                                top: -1.3rem;
+                                right: 19%;
+                                color: #646466;
+                            }
+                        }
+                        &_bar {
+                            height: 1rem;
+                            width: 74%;
+                            margin-left: 2rem;
+                            border-radius: 1rem;
+                            box-shadow: 0px 0px 11px #bfb8b8;
+                            &.color_orange {
+                                background-color: $color_orange;
+                            }
+                            &.color_green {
+                                background-color: $color_green_dark;
+                            }
+                            &.color_blue {
+                                background-color: $color_blue_dark;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .description .post_new_job_wrapper_form {
+            margin-bottom: 1rem;
+        }
+        
+        .post_new_job.upload {
+            // width: 75%;
+        }
+        
+        .post_new_job.asigneee {
+            width: 67%;
+            & select {
+                width: 100%;
+            }
+        }
+        
+        .post_job_success {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background-color: #0000001f;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &_wrapper {
+                position: relative;
+                background-color: #fff;
+                padding: 2rem;
+                border-radius: 2%;
+            }
+            & img {
+                height: 50vh !important;
+            }
+            & span {
+                margin: 0 auto !important;
+                width: 100%;
+                left: 10%;
+            }
+            &_p {
+                width: 71%;
+                margin: 0 auto;
+                text-align: center;
+            }
+        }
+        
+        .gen_title {
+            position: relative;
+            top: 1.1rem;
+            left: 1.4rem;
+            color: $color-black;
+            & svg {
+                fill: currentColor;
+            }
+        }
+        
+        .post_job {
+            justify-content: flex-start;
+            margin-left: 5rem;
+        }

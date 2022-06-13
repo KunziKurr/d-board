@@ -1,0 +1,163 @@
+.profile {
+    position: relative;
+    left: 6rem;
+    margin-bottom: 6rem;
+    &_wrapper {
+        &_details {
+            display: flex;
+            align-items: center;
+            margin: 1rem 3rem;
+            &_avatar {
+                background-color: #ddd;
+                border-radius: 50%;
+                padding: 1rem;
+                margin-right: 3rem;
+                & svg {
+                    width: 10rem;
+                    height: 10rem;
+                }
+            }
+            &_details {
+                &_name {
+                    font-size: 1.7rem;
+                    font-weight: bold;
+                }
+                &_mail {
+                    font-size: 1.1rem;
+                }
+                &_no {
+                    font-size: 1.1rem
+                }
+            }
+        }
+        &_info_wrapper {
+            width: 73%;
+            margin: 2rem 3rem;
+            padding: 2rem 0;
+            box-shadow: 0px 0px 12px #ddd;
+            display: grid;
+            place-content: center;
+            &_info {
+                display: flex;
+                flex-direction: row;
+                padding: 0rem 2rem;
+                margin: 1.6rem 0;
+                &_wp_name {
+                    background-color: #f9b47a30;
+                    display: flex;
+                    align-items: center;
+                    margin: 0rem 1rem 0 4rem;
+                    font-size: 1.3rem;
+                    padding: 0.7rem 0.9rem;
+                    color: $color_blue_dark;
+                    position: relative;
+                    &:before {
+                        content: "";
+                        height: 1.3rem;
+                        width: 1.7rem;
+                        background-color: $color_orange;
+                        position: absolute;
+                        left: -4rem;
+                        border-radius: 0.7rem;
+                    }
+                }
+                &_wp_date {
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.3rem;
+                    margin: 0rem 1.9rem;
+                }
+                &_wp_status {
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.2rem;
+                    margin: 0rem 0.9rem;
+                }
+                &_wp_leave {
+                    border-radius: 3rem;
+                    border: none;
+                    padding: 1rem 2rem;
+                    margin: 0rem 5rem;
+                    font-size: 1.2rem;
+                    color: $color_white;
+                    background-color: $color_blue_dark;
+                    // font-weight: bold;
+                }
+            }
+        }
+        &_invitation {
+            padding: 1rem 0rem 0 2.8rem;
+            &_wrapper {
+                box-shadow: 0px 0px 12px #ddd;
+                display: grid;
+                place-content: center;
+                width: 75%;
+                &_h4 {
+                    font-size: 1.7rem;
+                    margin: 2rem 0 3rem 4rem;
+                    position: relative;
+                    top: 1rem;
+                }
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                &_lister {}
+                &_list {
+                    display: flex;
+                    align-items: center;
+                    margin: 3rem 8rem;
+                    justify-content: center;
+                    &_name {
+                        display: flex;
+                        align-items: center;
+                        font-size: 1.4rem;
+                        position: relative;
+                        justify-content: center;
+                        & svg {
+                            width: 8rem;
+                            height: 8rem;
+                            position: absolute;
+                            top: -3.5rem;
+                            left: -7rem;
+                        }
+                    }
+                    &_wp_name {
+                        background-color: #f9b47a30;
+                        display: flex;
+                        align-items: center;
+                        margin: 0rem 1rem 0 4rem;
+                        font-size: 1.3rem;
+                        padding: 0.7rem 0.9rem;
+                        color: #365289;
+                        position: relative;
+                    }
+                    &_days {
+                        display: flex;
+                        align-items: center;
+                        font-size: 1.3rem;
+                        margin: 0rem 1.9rem;
+                        color: $color_red;
+                    }
+                    &_accept {
+                        border-radius: .7rem;
+                        border: none;
+                        padding: 1rem 2rem;
+                        margin: 0rem 1rem;
+                        font-size: 1.3rem;
+                        color: #fff;
+                        background-color: #365289;
+                    }
+                    &_decline {
+                        border-radius: .7rem;
+                        border: none;
+                        padding: 1rem 2rem;
+                        margin: 0rem 1rem;
+                        font-size: 1.3rem;
+                        color: #fff;
+                        background-color: $color_red;
+                    }
+                }
+            }
+        }
+    }
+}

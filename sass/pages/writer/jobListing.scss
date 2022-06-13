@@ -1,0 +1,275 @@
+.job_listing {
+    position: relative;
+    margin: 3rem 0;
+    &_wrapper {
+        box-shadow: 0px 0px 30px #e9e8e8;
+        padding: 2rem 2rem 3rem 2rem;
+        position: relative;
+        border-radius: 0.5rem;
+        &_heading {
+            display: flex;
+            align-items: center;
+            color: $color_blue_dark;
+            & svg {
+                width: 2rem;
+                height: 2rem;
+                fill: currentColor;
+            }
+            & p {
+                margin: 0 .7rem;
+                font-weight: bold;
+                font-size: 1.3rem;
+            }
+        }
+        &_search {
+            margin: 2rem 0;
+            position: relative;
+            &_label {
+                font-size: 1.3rem;
+                color: #79797a;
+            }
+            &_container {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+            }
+            &_input {
+                width: 50%;
+                padding: 1rem 0rem;
+                margin-top: 0.4rem;
+                border: none;
+                border-bottom: 1px solid #ddd;
+            }
+            &_post_job {
+                right: 0;
+                border-radius: 1rem;
+            }
+            & svg {
+                margin-left: -3rem;
+            }
+        }
+    }
+    &_table {
+        &_wrapper {
+            & table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            & tr {
+                &:first-child {
+                    &:hover {
+                        background-color: unset;
+                        cursor: unset;
+                    }
+                }
+                &:hover {
+                    background-color: #ddd;
+                    cursor: pointer;
+                }
+            }
+            & td,
+            th {
+                border-bottom: 1px solid #dddddd;
+                padding: 2rem 3.1rem;
+                text-align: left;
+                font-size: 1.2rem;
+                & .progress {
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    & svg {
+                        position: absolute;
+                        width: 1.7rem;
+                        height: 1.7rem;
+                        right: -.6rem;
+                    }
+                }
+                & .with_avatar {
+                    display: flex;
+                    align-items: center;
+                    & svg {
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        background-color: #ddd;
+                        border-radius: 3rem;
+                        margin-right: 2rem;
+                    }
+                }
+                & .progress_status {
+                    border: none;
+                    padding: 1.1rem 1.4rem;
+                    border-radius: 1rem;
+                    color: $color_orange;
+                    background-color: #fbe3d0;
+                    font-weight: 600;
+                }
+                & .payment_status {
+                    border: none;
+                    padding: 1.1rem 1.4rem;
+                    border-radius: 1rem;
+                    color: $color_green_dark;
+                    background-color: #cbf1cc;
+                    font-weight: 600;
+                }
+                &.edit_pencil_td {
+                    position: relative;
+                }
+                & .edit_pencil {
+                    & svg {
+                        background-color: unset;
+                        padding: unset;
+                        position: absolute;
+                        right: 1.5rem;
+                        width: 2.5rem;
+                        height: 2.5rem;
+                        top: 22%;
+                        border: 0;
+                        fill: $color_blue_dark
+                    }
+                }
+            }
+            // & tr:nth-child(even) {
+            //     background-color: #dddddd;
+            // }
+        }
+    }
+}
+
+.summaryText {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    color: $color_blue_dark;
+    font-size: 1.2rem;
+    font-weight: bold;
+    & svg {
+        width: 2rem;
+        height: 2rem;
+        fill: currentColor;
+        margin-right: 1rem;
+    }
+}
+
+.table_heading {
+    background-color: unset !important;
+}
+
+.job_summary {
+    & td {
+        border: none;
+        color: $color_blue_dark;
+    }
+    & td.color_green {
+        color: $color_green_dark;
+    }
+    & tr {
+        background-color: #C7DBC8;
+        border-radius: 9rem;
+        margin: 4rem 0;
+    }
+    td:first-child {
+        // border-left-style: solid;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    td:last-child {
+        // border-right-style: solid;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+}
+
+.summary {
+    & .job_listing_table_wrapper table {
+        border-collapse: separate;
+        width: 100%;
+        border-spacing: 0 1rem;
+    }
+}
+
+.payment_summary {
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        & tr {
+            border-bottom: 1px solid #ddd;
+            width: 100%;
+            // text-align: center;
+            td {
+                color: $color_blue_dark;
+                // text-align: center;
+            }
+        }
+    }
+    & .invoice {
+        background-color: $color_blue_dark !important;
+        color: $color_white !important;
+        font-weight: 500 !important;
+    }
+}
+
+.payment_status.pending {
+    background-color: #fbe3d0 !important;
+    color: $color_orange !important;
+}
+
+.place_top {
+    right: 1rem;
+    top: 1.5rem;
+}
+
+.job_detail_modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #02020263;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    &_wrapper {
+        width: 48%;
+        background-color: #fff;
+        border-radius: 0.8rem;
+        margin-top: 10rem;
+        margin-bottom: 2rem;
+        position: relative;
+        &_close {
+            position: absolute;
+            right: 2rem;
+            top: 1rem;
+            border: none;
+            background: none;
+            & svg {
+                width: 3rem;
+                height: 3rem;
+                fill: $color_blue_dark
+            }
+        }
+    }
+    & .view_job_summary_wrapper_container {
+        padding: 0rem 2rem;
+    }
+    & .post_new_job_wrapper_form_container_block {
+        margin: 1rem auto;
+        width: 88%;
+        position: relative;
+        top: 1rem;
+    }
+    & .post_new_job_wrapper_form_input {
+        width: 100%;
+        height: 9rem;
+    }
+    &_btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        & .orange_color {
+            background-color: $color_orange;
+        }
+    }
+}

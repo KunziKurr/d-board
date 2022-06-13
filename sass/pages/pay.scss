@@ -1,0 +1,151 @@
+.pay {
+    &_wrapper {
+        padding: 1rem 5rem;
+        &_heading {
+            font-size: 1.4rem;
+        }
+        &_options {
+            display: flex;
+            flex-direction: row;
+            margin: 2rem 0;
+            &_otp {
+                display: flex;
+                box-shadow: 0px 0px 6px #ddd;
+                margin: 0 1rem;
+                border-radius: 0.3rem;
+            }
+        }
+        &_propter {
+            background-color: #eab4b4;
+            width: 55%;
+            padding: 1rem 1.2rem;
+            border-radius: 0.6rem;
+            box-shadow: 1px 1px 14px #ddd;
+            margin: 3rem 0;
+            & p {
+                font-size: 1.2rem;
+            }
+        }
+        &_ul {
+            list-style: auto;
+            font-size: 1.2rem;
+            margin: 1rem 3rem;
+        }
+        &_complete {
+            right: 0;
+            border: none;
+            color: #fff;
+            background-color: #365289;
+            padding: 1rem 3.2rem;
+            border-radius: 2.7rem;
+            font-size: 1.1rem;
+        }
+    }
+    &_success {
+        position: fixed;
+        background-color: #5a81816b;
+        top: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &_wrapper {
+            background-color: #fff;
+            width: 27%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 4rem;
+            &_top {
+                height: 50%;
+                background-color: $color_blue_dark;
+                position: relative;
+                border-bottom-left-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+                & h1 {
+                    color: #fff;
+                    display: flex;
+                    text-align: center;
+                    font-size: 1.4rem;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-self: center;
+                    text-indent: 3.1rem;
+                    margin-top: 0.5rem;
+                    position: absolute;
+                    top: -1px;
+                    & svg {
+                        position: absolute;
+                        left: 1rem;
+                        border-bottom: unset;
+                        padding-bottom: 2px;
+                        display: flex;
+                        align-items: center;
+                        align-self: center;
+                        justify-content: center;
+                        top: 2px;
+                        height: 2rem;
+                        width: 1.8rem;
+                    }
+                }
+            }
+            &_done {
+                margin: 7rem 0rem 0rem 1rem;
+                & svg {
+                    width: 3rem;
+                    height: 3rem;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    fill: #365289;
+                }
+            }
+            &_name {
+                margin: 1rem 1rem;
+                color: #fff;
+                font-size: 1.6rem;
+                font-weight: bold;
+            }
+            &_success {
+                font-size: 3.1rem;
+                max-width: 82%;
+                color: #fff;
+                font-weight: bold;
+                margin: 1rem 1rem;
+            }
+            &_bottom {
+                &_order_details {
+                    margin: 1rem;
+                    color: #79797a;
+                }
+                &_date {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin: 1rem;
+                }
+                &_amount {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin: 1rem;
+                    margin-top: -1rem;
+                }
+                &_content {
+                    margin: 1rem;
+                    font-size: 1.1rem;
+                }
+                &_down_btn {
+                    margin: 3rem auto 2rem auto;
+                    border: none;
+                    color: #fff;
+                    background-color: #365289;
+                    padding: 1rem 3.2rem;
+                    border-radius: 0.5rem;
+                    font-size: 1.1rem;
+                    display: flex;
+                }
+            }
+        }
+    }
+}
