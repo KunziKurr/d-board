@@ -9,11 +9,14 @@ import Loader from '../../loading';
 import { connect, useDispatch, useSelector } from 'react-redux';
 
 
+
 export default function BaseHeader(props) {
-    const [errorMag, setErrorMag] = useState('');
+
+    // const [errorMag, setErrorMag] = useState('');
     const [launchLoader, setLaunchLoader] = useState('');
     const { userData } = useSelector(state => state.registerJob);
-    console.log(userData)
+
+
     return(
         <div className="dashboard_base_header">
             
@@ -21,7 +24,7 @@ export default function BaseHeader(props) {
                 <div className="dashboard_base_top">
                     <div className="dashboard_base_top_left_content">
                     <p className="home_writer_container_name">
-                            Hello {userData.firstName},
+                            Hello {userData.user.firstName},
                         </p>
                         <span className="home_writer_container_welcome">
                             Welcome back!
@@ -90,7 +93,7 @@ export default function BaseHeader(props) {
 </defs>
                         </svg>
                         <p className="dashboard_base_top_right_profile_name">
-                        {userData.firstName}
+                        {userData.user.firstName}
                         </p>
                         <svg width="20" className='dashboard_base_top_right_profile_down_btn' height="20" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                             <path d="M297.376 414.4l22.624 22.624 181.024-181.024-45.248-45.248-135.776 135.744-135.776-135.744-45.248 45.248z"></path>

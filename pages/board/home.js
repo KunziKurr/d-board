@@ -52,10 +52,8 @@ export default  function  Home() {
     const { token } = useSelector(state => state.registerJob);
    const { userData } = useSelector(state => state.registerJob);
    const [newWriter, showNewWriterDialog] = useState("hidden")
-   console.log(userData + "[][]")
-    // console.log(token.length <= 0);
-    // token == null ? router.push('../login') : null;
 
+//    token == null ? router.push('../login') : null;
     useEffect(() => {
         getCountries(token);
     }, [])
@@ -181,7 +179,7 @@ console.log(response + "*******")
 
                                 <div className="home_writer_container_recent_activities_pay_chart_content">
                                     <p className="home_writer_container_recent_activities_pay_chart_content_amount">
-                                        {/* KES {userData.payments.approved} */}
+                                      
                                        
                                     </p>
                                     <p className="home_writer_container_recent_activities_pay_chart_content_amount_pr">

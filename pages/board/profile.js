@@ -58,7 +58,6 @@ export default function Profle() {
     const [errorMagg, launchLoader,editProfile , setErrorMag] = useprofile();
 
    const { userData } = useSelector(state => state.registerJob);
-    console.log(userData)
     
     return(
         <div>
@@ -80,9 +79,9 @@ export default function Profle() {
                         {svgService.users_icon}
                     </div>
                     <div className="profile_wrapper_details_details">
-                        <p className="profile_wrapper_details_details_name">{userData.firstName} {userData.lastName}</p>
-                        <p className="profile_wrapper_details_details_mail">{userData.email}</p>
-                        <p className="profile_wrapper_details_details_no"> {userData.phoneNumber}</p>
+                        <p className="profile_wrapper_details_details_name">{userData.user.firstName} {userData.userlastName}</p>
+                        <p className="profile_wrapper_details_details_mail">{userData.user.email}</p>
+                        <p className="profile_wrapper_details_details_no"> {userData.user.phoneNumber}</p>
                     </div>
                 </div>
 
@@ -124,7 +123,7 @@ export default function Profle() {
                     <input    onFocus={(e) => {
                         console.log('Focused on input');
                     }} className="login_container_login_form_form_input" 
-                    placeholder={userData.firstName}
+                    placeholder={userData.user.firstName}
                     type="text"
                     name="firstName"
                     onChange={handleChange}
@@ -136,7 +135,7 @@ export default function Profle() {
                        Last Name
                     </label>
                     <input className="login_container_login_form_form_input"
-                    placeholder={userData.lastName}
+                    placeholder={userData.user.lastName}
 
                       type="text"
                       name="lastName"
@@ -155,7 +154,7 @@ export default function Profle() {
                     <input    onFocus={(e) => {
                         console.log('Focused on input');
                     }} className="login_container_login_form_form_input upload" 
-                    placeholder={userData.firstName}
+                    placeholder={userData.user.firstName}
                     type="date"
                     name="dateOfBirth"
                     onChange={handleChange}

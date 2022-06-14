@@ -8,10 +8,9 @@ import { connect, useDispatch, useSelector } from 'react-redux';
 
 export default function Landing(props) {
   const { token } = useSelector(state => state.registerJob);
-console.log("TOKEN IS =>"  +  token)
   const router = useRouter()
 
-  
+    
   return (
     <div>
       <Head>
