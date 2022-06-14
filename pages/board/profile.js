@@ -10,7 +10,9 @@ import { VictoryPie } from "victory";
 import Loader from '../../loading';
 import BaseMenu from '../dashboard/baseMenu';
 import BaseHeader from '../dashboard/baseHeader';
-import svgService from '../../dataservices'
+import svgService from '../../dataservices';
+import { connect, useDispatch, useSelector } from 'react-redux';
+import useprofile from '../api/profile'
 
 const svgs ={
     folder:<svg version="1.1" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 512 512">
@@ -53,7 +55,10 @@ const svgs ={
 
 
 export default function Profle() {
-     
+    const [errorMagg, launchLoader,editProfile , setErrorMag] = useprofile();
+
+   const { userData } = useSelector(state => state.registerJob);
+    console.log(userData)
     
     return(
         <div>
@@ -61,20 +66,138 @@ export default function Profle() {
             <div className="templatePreset">
             <div className="templatePostPreset">
                 
-               
+           { (launchLoader.length > 0) ? <Loader /> : null }
+           {/* {
+                    (errorMagg.length > 0)? (<div className="erroMag"> <button onClick={()=>{setErrorMag('')}}>X</button> {errorMagg} </div>):<>    </>
+                }  */}
         <div className="profile">
             <div className="profile_wrapper">
-                
+                <h4 className="profile_wrapper_heading">
+                    Profile Settings
+                </h4>
                 <div className="profile_wrapper_details">
                     <div className="profile_wrapper_details_avatar">
                         {svgService.users_icon}
                     </div>
                     <div className="profile_wrapper_details_details">
-                        <p className="profile_wrapper_details_details_name">Margareth Zend</p>
-                        <p className="profile_wrapper_details_details_mail"> maragarethzend@gmail.com</p>
-                        <p className="profile_wrapper_details_details_no"> +254700123456</p>
+                        <p className="profile_wrapper_details_details_name">{userData.firstName} {userData.lastName}</p>
+                        <p className="profile_wrapper_details_details_mail">{userData.email}</p>
+                        <p className="profile_wrapper_details_details_no"> {userData.phoneNumber}</p>
                     </div>
                 </div>
+
+                <div className="profile_wrapper_edit_form">
+
+                <h4 className="profile_wrapper_details_heading">
+                   Edit Profile Details
+                </h4>
+
+
+                     
+                <Formik
+                    
+                    initialValues={{ 
+                        "firstName": "",
+                        "lastName": "",
+                        "dateOfBirth": "",
+                        "avatar": ""
+                 }}
+                   
+                    onSubmit={(values) => {
+                        editProfile(values)
+                    }}
+                    >
+                    {({
+                        values,
+                        errors,
+                        touched,
+                        handleChange,
+                        handleBlur,
+                        handleSubmit,
+                        isSubmitting,
+                        /* and other goodies */
+                    }) => (
+                <form className="login_container_login_form_form" onSubmit={handleSubmit}>
+                    <label className="login_container_login_form_form_label"> 
+                        First Name
+                    </label>
+                    <input    onFocus={(e) => {
+                        console.log('Focused on input');
+                    }} className="login_container_login_form_form_input" 
+                    placeholder={userData.firstName}
+                    type="text"
+                    name="firstName"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.firstName} />
+
+
+                    <label className="login_container_login_form_form_label"> 
+                       Last Name
+                    </label>
+                    <input className="login_container_login_form_form_input"
+                    placeholder={userData.lastName}
+
+                      type="text"
+                      name="lastName"
+                      onChange={handleChange}
+                      onBlur={handleBlur}
+                      value={values.lastName}
+                       />
+                    
+
+                    <div className="login_container_login_form_form_inliner">
+                    <div className="login_container_login_form_form_inliner_mapper">
+
+                    <label className="login_container_login_form_form_label"> 
+                        Date of Birth
+                    </label>
+                    <input    onFocus={(e) => {
+                        console.log('Focused on input');
+                    }} className="login_container_login_form_form_input upload" 
+                    placeholder={userData.firstName}
+                    type="date"
+                    name="dateOfBirth"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.dateOfBirth} />
+                   </div>
+                   <div className="login_container_login_form_form_inliner_mapper">
+
+
+                    <label className="login_container_login_form_form_label"> 
+                        Avatar
+                    </label>
+                    <input    onFocus={(e) => {
+                        console.log('Focused on input');
+                    }} className="login_container_login_form_form_input " 
+                    type="file"
+                    name="avatar"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.avatar} />
+                    </div>
+              
+              </div>
+
+
+
+                    <button className="login_container_login_form_form_login_button" type='submit' onClick={handleSubmit}>
+                        Update Profile Details 
+                        <svg className="login_container_login_form_form_login_button_icon" width="7" height="11" viewBox="0 0 7 11" fill="none">
+                            <path d="M0.327414 0.32733C0.65285 0.00189272 1.18049 0.00189272 1.50592 0.32733L6.08926 4.91066C6.41469 5.2361 6.41469 5.76374 6.08926 6.08917L1.50592 10.6725C1.18049 10.9979 0.65285 10.9979 0.327414 10.6725C0.00197664 10.3471 0.00197664 9.81943 0.327414 9.494L4.32149 5.49992L0.327414 1.50584C0.00197664 1.1804 0.00197664 0.652766 0.327414 0.32733Z" fill="white"/>
+                        </svg>
+
+                    </button>
+                   
+                </form>
+                   )}
+                   </Formik>
+
+                </div>
+
+
+               
                
                
             </div>

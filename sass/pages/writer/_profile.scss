@@ -3,10 +3,42 @@
     left: 6rem;
     margin-bottom: 6rem;
     &_wrapper {
+        &_heading {
+            margin: 2rem 3rem;
+            font-size: 3rem;
+        }
+        &_edit_form {
+            width: 70%;
+            & label {
+                margin-left: 1.5rem;
+            }
+            & .upload {
+                // padding: 1.7rem 0;
+            }
+            & input {
+                position: relative;
+                 ::placeholder {
+                    color: $color_black
+                }
+                &::-webkit-inner-spin-button,
+                &::-webkit-calendar-picker-indicator {
+                    // display: none;
+                    // -webkit-appearance: none;
+                    // background-color: red;
+                    position: absolute;
+                    width: 100%;
+                    opacity: 0;
+                }
+            }
+        }
         &_details {
             display: flex;
             align-items: center;
             margin: 1rem 3rem;
+            &_heading {
+                margin: 2rem 3rem;
+                font-size: 2.3rem;
+            }
             &_avatar {
                 background-color: #ddd;
                 border-radius: 50%;
@@ -23,10 +55,11 @@
                     font-weight: bold;
                 }
                 &_mail {
-                    font-size: 1.1rem;
+                    font-size: 1.5rem;
+                    margin: 1rem 0;
                 }
                 &_no {
-                    font-size: 1.1rem
+                    font-size: 1.5rem
                 }
             }
         }

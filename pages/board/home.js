@@ -13,7 +13,7 @@ import BaseHeader from '../dashboard/baseHeader';
 import svgService from '../../dataservices'
 import BaseUrl from '../../utils/baseUrl'
 import { connect, useDispatch, useSelector } from 'react-redux';
-
+import useGetCountries from '../api/fetchCountries';
 
 
 const svgs ={
@@ -47,15 +47,19 @@ const sampleData =[
 
 
 export default  function  Home() {
-    // 
+    const [getCountries, response] = useGetCountries()
     const dispatch = useDispatch();
     const { token } = useSelector(state => state.registerJob);
    const { userData } = useSelector(state => state.registerJob);
    const [newWriter, showNewWriterDialog] = useState("hidden")
    console.log(userData + "[][]")
     // console.log(token.length <= 0);
-    token == null ? router.push('../login') : null;
+    // token == null ? router.push('../login') : null;
 
+    useEffect(() => {
+        getCountries(token);
+    }, [])
+console.log(response + "*******")
     return(
         <div>   
         <BaseMenu />

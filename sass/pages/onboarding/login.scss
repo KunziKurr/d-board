@@ -69,8 +69,19 @@
                 display: flex;
                 width: 100%;
                 align-items: center;
-                color: red;
+                // color: red;
                 font-size: 1.2rem;
+                &_inliner {
+                    width: 70%;
+                    display: flex;
+                    flex-direction: row;
+                    &_mapper {
+                        width: 50%;
+                        & input {
+                            width: 90% !important;
+                        }
+                    }
+                }
                 & .MuiFormControl-root {
                     width: 70%;
                     margin: 1.3rem 0;
